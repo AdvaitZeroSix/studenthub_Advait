@@ -23,6 +23,10 @@ nav a{
 nav h1{
     margin: 0;
 }
+nav h1{
+    margin: 0;
+}
+
 .hero{
     text-align: center;
     padding: 60px;
@@ -33,21 +37,34 @@ nav h1{
 .hero p{
     margin-bottom: 25px;
 }
+.hero h1{
+    margin-bottom: 10px;
+}
+
+.hero p{
+    margin-bottom: 25px;
+}
+
 .hero button{
     padding: 10px 20px;
     border: none;
     background-color: rgb(99, 180, 144);
+
     border-radius: 5px;
 }
+
 .features{
     text-align: center;
     padding: 40px;
 }
+
+
 .feature-container{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
+
 .card{
     background-color: white;
     padding: 20px;
@@ -55,6 +72,7 @@ nav h1{
     border-radius: 10px;
     box-shadow: 0px 2px 5px gray;
 }
+
 .card h3{
     margin-top: 0;
 }
@@ -69,3 +87,7 @@ footer{
         align-items: center;
     }
 }
+.card h3{
+    margin-top: 0;
+}
+
