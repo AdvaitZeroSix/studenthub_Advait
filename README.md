@@ -1,6 +1,6 @@
 # StudentHub – Advait Saxena
 
-StudentHub is a responsive landing page designed to help students stay organized and manage their academic activities efficiently. The website includes a navigation bar, a hero section with a call-to-action button, and a features section highlighting key student productivity tools such as Notes, Timetable, and Tasks.
+StudentHub is a responsive landing page designed to help students stay organized and manage their academic activities efficiently. The website includes a navigation bar, a hero section with a call-to-action button, and a features section highlighting key student productivity tools such as Notes, Timetable, and Assignments.
 
 ## Technologies Used
 
