@@ -1,7 +1,9 @@
 body{
     margin: 0;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 nav{
     background-color: rgb(92, 184, 106);
     padding: 15px;
