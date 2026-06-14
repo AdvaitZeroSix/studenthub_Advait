@@ -3,7 +3,7 @@ body{
     margin: 0;
 }
 nav{
-    background-color: lightblue;
+    background-color: rgb(92, 184, 106);
     padding: 15px;
 
     display: flex;
@@ -12,8 +12,19 @@ nav{
 }
 nav a{
     text-decoration: none;
-    margin-right: 15px;
+    margin-left: 20px;
+    color: black;
+    font-weight: bold;
 }
-nav h2{
+nav h1{
     margin: 0;
+}
+.hero{
+    text-align: center;
+    padding: 60px;
+}
+.hero button{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(99, 180, 144);
 }
