@@ -1,6 +1,8 @@
 body{
     margin: 0;
+    background-color: #98d59d;
 }
+
 html{
     scroll-behavior: smooth;
 }
