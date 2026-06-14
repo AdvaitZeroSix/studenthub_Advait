@@ -35,6 +35,15 @@ nav h1{
     text-align: center;
     padding: 60px;
 }
+.stats{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.about{
+    text-align: center;
+    padding: 40px;
+}
 .hero h1{
     margin-bottom: 10px;
 }
