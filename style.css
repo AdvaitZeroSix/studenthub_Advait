@@ -3,7 +3,7 @@ html{
     scroll-behavior: smooth;
 }
 nav{
-    background-color: rgb(71, 92, 175);
+    background-color: rgb(49, 50, 56);
     padding: 15px;
 
     display: flex;
@@ -13,7 +13,7 @@ nav{
 nav a{
     text-decoration: none;
     margin-left: 20px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 nav h1{
@@ -23,7 +23,8 @@ nav h1{
 body{
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fcfcfc;
+    color: white;
+    background-color: #000000;
 }
 
 .hero{
@@ -43,7 +44,7 @@ body{
 .hero button{
     padding: 10px 20px;
     border: none;
-    background-color: rgb(176, 188, 70);
+    background-color: rgb(50, 214, 83);
 
     border-radius: 5px;
 }
@@ -58,11 +59,11 @@ body{
 }
 
 .card{
-    background-color: white;
+    background-color: rgb(71, 73, 72);
     padding: 20px;
     width: 250px;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px gray;
+    box-shadow: 0px 2px 5px rgb(41, 203, 101);
 }
 
 .card h3{
@@ -80,7 +81,7 @@ body{
 footer{
     text-align: center;
     padding: 20px;
-    background-color: rgb(92, 184, 106);
+    background-color: rgb(65, 210, 87);
 }
 @media (max-width: 768px){
     .feature-container{
