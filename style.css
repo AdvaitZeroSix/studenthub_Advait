@@ -64,6 +64,12 @@ body{
     width: 250px;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgb(41, 203, 101);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .card h3{
@@ -80,8 +86,8 @@ body{
 }
 footer{
     text-align: center;
-    padding: 20px;
-    background-color: rgb(65, 210, 87);
+    padding: 0px;
+    background-color: rgb(0, 0, 0);
 }
 @media (max-width: 768px){
     .feature-container{
