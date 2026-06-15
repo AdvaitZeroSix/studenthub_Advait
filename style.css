@@ -19,6 +19,9 @@ nav a{
 nav h1{
     margin: 0;
 }
+nav a.Active{
+    color: rgb(50, 214, 83);
+}
 
 body{
     margin: 0;
