@@ -74,7 +74,21 @@ body{
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+.card button{
+    background-color: rgb(50, 214, 83);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
 
+.card button:hover{
+    background-color: rgb(40, 180, 70);
+    transform: scale(1.05);
+}
 .card h3{
     margin-top: 0;
 }
@@ -91,6 +105,26 @@ footer{
     text-align: center;
     padding: 0px;
     background-color: rgb(0, 0, 0);
+}
+.search-section{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-bar{
+    width: 60%;
+    max-width: 500px;
+    padding: 12px 16px;
+
+    background-color: rgb(71, 73, 72);
+
+    border: 2px solid rgb(50, 214, 83);
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 16px;
 }
 @media (max-width: 768px){
     .feature-container{
