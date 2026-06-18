@@ -8,7 +8,7 @@
 </head>
 <body>
 <nav>
-    <h2><a href="index.html">Student Hub</a></h2>
+    <h2><a href="index.html" class="nav-brand">Student Hub</a></h2>
     <div>
         <a href="index.html">Home</a>
         <a href="dashboard.html">Dashboard</a>
@@ -33,27 +33,27 @@
 </section>
     <section class="features">
     <h2>Your Notes</h2>
-    <section class="search-section"><input class= "search-bar" type="text" placeholder="Search notes by subject..."></section>
+    <section class="search-section"><input id="searchBar" class= "search-bar" type="text" placeholder="Search notes by subject..."></section>
     <div class="feature-container">
-        <div class="card">
+        <div class="card note-card">
             <h3>Data Structures</h3>
             <p>Linked Lists, Stacks, Queues, Trees</p>
             <p>Last Updated: June 15, 2026</p>
             <button>Open Notes</button>
         </div>
-        <div class="card">
+        <div class="card note-card">
             <h3>Operating Systems</h3>
             <p>Processes, Scheduling, Memory Management</p>
             <p>Last Updated: June 10, 2026</p>
             <button>Open Notes</button>
         </div>
-        <div class="card">
+        <div class="card note-card">
             <h3>Database Management Systems</h3>
             <p>SQL, Normalization, Transactions</p>
             <p>Last Updated: June 12, 2026</p>
             <button>Open Notes</button>
         </div>
-        <div class="card">
+        <div class="card note-card">
             <h3>Computer Networks</h3>
             <p>OSI Model, TCP/IP, Routing</p>
             <p>Last Updated: June 8, 2026</p>
@@ -61,6 +61,7 @@
         </div>
     </div>
 </section>
+<p class="no-results" id="noResults">No notes found matching your search.</p>
 <footer>
     <p>Student Hub by Advait Saxena</p>
 </footer>
