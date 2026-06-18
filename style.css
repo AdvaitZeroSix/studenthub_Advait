@@ -2,6 +2,14 @@
 html{
     scroll-behavior: smooth;
 }
+body,
+nav,
+.card,
+.search-bar,
+footer,
+button{
+    transition: all 0.3s ease;
+}
 nav{
     background-color: rgb(49, 50, 56);
     padding: 15px;
@@ -63,6 +71,37 @@ body{
 .light-mode{
     background-color:white;
     color:black;
+}
+.light-mode nav{
+    background-color: #cacdca;
+}
+.light-mode .card{
+    background-color: white;
+    color: black;
+
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
+}
+.light-mode .search-bar{
+    background-color: white;
+    color: black;
+}
+
+.light-mode .search-bar::placeholder{
+    color: #666;
+}
+.light-mode button{
+    color: black;
+}
+.light-mode footer{
+    background-color: #d8d8d8;
+    color: #222;
+}
+.light-mode nav a{
+    color: #222;
+}
+
+.light-mode nav a.Active{
+    color: rgb(50,214,83);
 }
 .card{
     background-color: rgb(71, 73, 72);
