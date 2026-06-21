@@ -9,15 +9,20 @@
 <body>
 <nav>
     <h2><a href="index.html" class="nav-brand">Student Hub</a></h2>
-    <div>
-        <a href="index.html" class = "Active">Home</a>
+    <div class="nav-links">
+        <a href="index.html" class="Active">Home</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="#about">About</a>
         <a href="notes.html">Notes</a>
     </div>
-    <div class="theme-switch">
-    <div class="switch-knob"></div>
-</div>
+    <div class="nav-right">
+        <div class="theme-switch">
+            <div class="switch-knob"></div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
 </nav>
 <section class="hero">
     <h1>Stay Organized</h1>
@@ -73,6 +78,6 @@
 <footer>
     <p>Student Hub by Advait Saxena</p>
 </footer>
+<button id="scrollTopBtn" aria-label="Scroll to top">&#8679;</button>
 <script src="script.js"></script>
 </body>
-</html>

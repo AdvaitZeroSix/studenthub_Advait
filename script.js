@@ -1,3 +1,34 @@
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+if(hamburger && navLinks){
+    hamburger.addEventListener("click", function(){
+        hamburger.classList.toggle("open");
+        navLinks.classList.toggle("open");
+    });
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function(){
+            hamburger.classList.remove("open");
+            navLinks.classList.remove("open");
+        });
+    });
+}
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+if(scrollTopBtn){
+    window.addEventListener("scroll", function(){
+        if(window.scrollY > 300){
+            scrollTopBtn.classList.add("visible");
+        } else {
+            scrollTopBtn.classList.remove("visible");
+        }
+    });
+    scrollTopBtn.addEventListener("click", function(){
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
+
 const uploadBtn = document.getElementById("uploadBtn");
 
 if(uploadBtn){
@@ -99,27 +130,34 @@ function escapeHTML(str) {
 
 function renderTasks(){
 
-    const taskList =
-        document.getElementById("taskList");
+    const taskList = document.getElementById("taskList");
 
     if(!taskList) return;
 
-    const pendingTasks =
-        tasks.filter(task => !task.completed);
-
-    const completedTasks =
-        tasks.filter(task => task.completed);
+    const pendingTasks   = tasks.filter(task => !task.completed);
+    const completedTasks = tasks.filter(task => task.completed);
 
     let html = "";
+
+    if(pendingTasks.length === 0 && completedTasks.length === 0){
+        html = `<p class="task-empty">No tasks yet — add one above!</p>`;
+        taskList.innerHTML = html;
+        return;
+    }
 
     pendingTasks.forEach(task => {
 
         const originalIndex = tasks.indexOf(task);
+        const priority = task.priority || "low";
+        const badgeClass = `badge-${priority}`;
+        const badgeLabel = priority.charAt(0).toUpperCase() + priority.slice(1);
 
         html += `
             <li class="task-item" data-index="${originalIndex}">
                 <input type="checkbox" data-index="${originalIndex}">
                 ${escapeHTML(task.text)}
+                <span class="badge ${badgeClass}">${badgeLabel}</span>
+                <button class="task-delete" data-index="${originalIndex}" aria-label="Delete task">&#x2715;</button>
             </li>
         `;
 
@@ -130,9 +168,11 @@ function renderTasks(){
         html += `<li class="completed-heading"><h3>Completed Tasks</h3></li>`;
 
         completedTasks.forEach(task => {
+            const originalIndex = tasks.indexOf(task);
             html += `
                 <li class="completed-task">
                     ${escapeHTML(task.text)}
+                    <button class="task-delete" data-index="${originalIndex}" aria-label="Delete task">&#x2715;</button>
                 </li>
             `;
         });
@@ -153,6 +193,12 @@ function completeTask(index){
 
 }
 
+function deleteTask(index){
+    tasks.splice(index, 1);
+    saveTasks();
+    renderTasks();
+}
+
 const taskList = document.getElementById("taskList");
 
 if(taskList){
@@ -162,36 +208,44 @@ if(taskList){
             completeTask(index);
         }
     });
+    taskList.addEventListener("click", function(e){
+        if(e.target.classList.contains("task-delete")){
+            const index = parseInt(e.target.dataset.index);
+            deleteTask(index);
+        }
+    });
 }
 
-const addTaskBtn =
-    document.getElementById("addTaskBtn");
+const addTaskBtn  = document.getElementById("addTaskBtn");
+const taskInput   = document.getElementById("taskInput");
+const prioritySelect = document.getElementById("prioritySelect");
 
-const taskInput =
-    document.getElementById("taskInput");
+function addTask(){
+    if(!taskInput) return;
+    const taskText = taskInput.value.trim();
+    if(taskText === "") return;
 
-if(addTaskBtn){
+    const priority = prioritySelect ? prioritySelect.value : "low";
 
-    addTaskBtn.addEventListener("click", function(){
-
-        const taskText =
-            taskInput.value.trim();
-
-        if(taskText === "") return;
-
-        tasks.push({
-            text: taskText,
-            completed: false
-        });
-
-        saveTasks();
-
-        renderTasks();
-
-        taskInput.value = "";
-
+    tasks.push({
+        text: taskText,
+        completed: false,
+        priority: priority
     });
 
+    saveTasks();
+    renderTasks();
+    taskInput.value = "";
+}
+
+if(addTaskBtn){
+    addTaskBtn.addEventListener("click", addTask);
+}
+
+if(taskInput){
+    taskInput.addEventListener("keydown", function(e){
+        if(e.key === "Enter") addTask();
+    });
 }
 const clearHistoryBtn =
     document.getElementById("clearHistoryBtn");
