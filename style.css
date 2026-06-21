@@ -14,6 +14,7 @@
 html{
     scroll-behavior: smooth;
 }
+
 body,
 nav,
 .card,
@@ -22,31 +23,36 @@ footer,
 button{
     transition: all 0.3s ease;
 }
+
 nav{
     background-color: var(--nav-color);
     padding: 15px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 nav a{
     text-decoration: none;
     margin-left: 20px;
     color: var(--nav-link-color);
     font-weight: bold;
 }
+
 nav h1{
     margin: 0;
 }
+
 nav h2{
     margin: 0;
     color: var(--nav-link-color);
 }
+
 nav a.nav-brand{
     color: var(--nav-link-color);
     font-size: 1.1em;
 }
+
 nav a.Active{
     color: rgb(50, 214, 83);
 }
@@ -66,9 +72,11 @@ body{
 .hero h1{
     margin-bottom: 10px;
 }
+
 .hero p{
     margin-bottom: 25px;
 }
+
 .hero button{
     padding: 10px 20px;
     border: none;
@@ -78,15 +86,18 @@ body{
     font-weight: bold;
     color: white;
 }
+
 .features{
     text-align: center;
     padding: 40px;
 }
+
 .feature-container{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
+
 .light-mode{
     --bg-color: white;
     --text-color: black;
@@ -98,6 +109,7 @@ body{
     --search-bar-bg: white;
     --search-bar-text: black;
 }
+
 .card{
     background-color: var(--card-color);
     padding: 20px;
@@ -107,10 +119,12 @@ body{
     cursor: pointer;
     transition: transform 0.3s ease;
 }
+
 .card:hover{
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+
 .card button{
     background-color: rgb(50, 214, 83);
     color: white;
@@ -126,6 +140,7 @@ body{
     background-color: rgb(40, 180, 70);
     transform: scale(1.05);
 }
+
 .card h3{
     margin-top: 0;
 }
@@ -134,16 +149,19 @@ body{
     text-align: center;
     padding: 60px;
 }
+
 .stats{
     text-align: center;
     padding: 60px;
 }
+
 footer{
     text-align: center;
     padding: 15px 0;
     background-color: var(--footer-color);
     color: var(--footer-text);
 }
+
 .search-section{
     text-align: center;
     margin: 20px 0;
@@ -160,39 +178,30 @@ footer{
     font-size: 16px;
     transition: all 0.3s ease;
 }
+
 .search-bar::placeholder{
     color: #999;
 }
+
 .theme-switch{
     width: 30px;
     height: 16px;
-
     background-color: rgb(50, 214, 83);
-
     border-radius: 20px;
-
     position: relative;
-
     cursor: pointer;
-
     margin-left: 12px;
-
     transition: all 0.3s ease;
 }
 
 .switch-knob{
     width: 10px;
     height: 10px;
-
     background-color: white;
-
     border-radius: 50%;
-
     position: absolute;
-
     top: 3px;
     left: 3px;
-
     transition: all 0.3s ease;
 }
 
@@ -203,107 +212,141 @@ footer{
 .theme-switch:hover{
     box-shadow: 0 0 6px rgba(50,214,83,0.6);
 }
+
 .task-manager{
-    text-align:center;
-    padding:40px;
+    text-align: center;
+    padding: 40px;
 }
 
 .task-input-container{
-    margin:20px 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 #taskInput{
-    padding:10px;
-    width:300px;
-
-    border:2px solid rgb(50,214,83);
-
-    border-radius:5px;
-
+    padding: 10px;
+    width: 300px;
+    border: 2px solid rgb(50,214,83);
+    border-radius: 5px;
     background-color: var(--card-color);
-
     color: var(--text-color);
 }
 
 #taskList{
-    list-style:none;
-    padding:0;
+    list-style: none;
+    padding: 0;
 }
+
 .task-item{
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    margin:12px 0;
-
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+    justify-content: center;
 }
+
 .completed-heading{
     list-style: none;
     margin-top: 16px;
 }
+
 .completed-heading h3{
     margin: 0;
 }
+
 .completed-task{
     text-decoration: line-through;
     color: rgb(140,140,140);
-    margin:10px 0;
-    list-style:none;
+    margin: 10px 0;
+    list-style: none;
 }
+
 #addTaskBtn{
-
     background-color: rgb(50,214,83);
-
     color: white;
-
-    border:none;
-
-    padding:10px 18px;
-
-    border-radius:6px;
-
-    cursor:pointer;
-
-    font-weight:bold;
-
-    margin-left:10px;
-
-    transition:0.3s;
-}
-#addTaskBtn:hover{
-
-    background-color: rgb(40,180,70);
-
-    transform: translateY(-2px);
-
-}
-#clearHistoryBtn{
-
-    background-color: rgb(71,73,72);
-
-    color: white;
-
-    border: 1px solid rgb(50,214,83);
-
-    padding: 8px 14px;
-
-    border-radius: 5px;
-
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.3s;
+}
 
-    margin-top: 15px;   
+#addTaskBtn:hover{
+    background-color: rgb(40,180,70);
+    transform: translateY(-2px);
+}
 
+#clearHistoryBtn{
+    background-color: rgb(71,73,72);
+    color: white;
+    border: 1px solid rgb(50,214,83);
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
     transition: 0.3s;
 }
 
 #clearHistoryBtn:hover{
-
     background-color: rgb(50,214,83);
-
     color: black;
-
 }
+
+.task-delete{
+    background: none;
+    border: none;
+    color: #e05252;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+    margin-left: auto;
+}
+
+.task-delete:hover{
+    transform: scale(1.3);
+}
+
+.priority-select{
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.badge{
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-low    { background-color: #2a6e3f; color: #afffca; }
+.badge-medium { background-color: #7a5c00; color: #ffe49a; }
+.badge-high   { background-color: #7a1f1f; color: #ffadad; }
+
+.task-empty{
+    color: #888;
+    font-size: 15px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
 .nav-right{
     display: flex;
     align-items: center;
@@ -320,6 +363,7 @@ footer{
     cursor: pointer;
     padding: 4px;
 }
+
 .hamburger span{
     display: block;
     width: 22px;
@@ -328,6 +372,7 @@ footer{
     border-radius: 2px;
     transition: all 0.3s ease;
 }
+
 .hamburger.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2){ opacity: 0; }
 .hamburger.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
@@ -362,60 +407,6 @@ footer{
     }
 }
 
-.task-delete{
-    background: none;
-    border: none;
-    color: #e05252;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 0 4px;
-    line-height: 1;
-    transition: transform 0.2s ease;
-    margin-left: auto;
-}
-.task-delete:hover{
-    transform: scale(1.3);
-}
-
-.priority-select{
-    padding: 4px 8px;
-    border-radius: 5px;
-    border: 1px solid var(--accent-color);
-    background-color: var(--card-color);
-    color: var(--text-color);
-    font-size: 13px;
-    cursor: pointer;
-    margin-left: 8px;
-}
-.badge{
-    display: inline-block;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 2px 8px;
-    border-radius: 20px;
-    margin-left: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.badge-low   { background-color: #2a6e3f; color: #afffca; }
-.badge-medium{ background-color: #7a5c00; color: #ffe49a; }
-.badge-high  { background-color: #7a1f1f; color: #ffadad; }
-
-.task-input-container{
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.task-empty{
-    color: #888;
-    font-size: 15px;
-    margin: 20px 0;
-    font-style: italic;
-}
 #scrollTopBtn{
     position: fixed;
     bottom: 30px;
@@ -435,10 +426,12 @@ footer{
     z-index: 999;
     line-height: 1;
 }
+
 #scrollTopBtn.visible{
     opacity: 1;
     pointer-events: auto;
 }
+
 #scrollTopBtn:hover{
     transform: translateY(-3px);
 }
@@ -446,9 +439,11 @@ footer{
 .note-card{
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .note-card.hidden{
     display: none;
 }
+
 .no-results{
     display: none;
     text-align: center;
@@ -456,3 +451,194 @@ footer{
     margin-top: 30px;
     font-size: 16px;
 }
+
+.pomodoro-section{
+    text-align: center;
+    padding: 20px 40px 60px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.pomo-tabs{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.pomo-tab{
+    padding: 8px 24px;
+    border-radius: 20px;
+    border: 2px solid var(--accent-color);
+    background: none;
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.pomo-tab.active{
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.pomo-tab:hover:not(.active){
+    background-color: rgba(50,214,83,0.15);
+}
+
+.pomo-ring-wrapper{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+}
+
+.pomo-ring{
+    width: 200px;
+    height: 200px;
+    transform: rotate(-90deg);
+}
+
+.pomo-ring-bg{
+    fill: none;
+    stroke: var(--card-color);
+    stroke-width: 12;
+}
+
+.pomo-ring-fill{
+    fill: none;
+    stroke: var(--accent-color);
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 553;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear, stroke 0.4s ease;
+}
+
+.pomo-ring-fill.break-mode{
+    stroke: #5bc4f5;
+}
+
+.pomo-time-display{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    font-family: monospace;
+}
+
+.pomo-controls{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.pomo-btn{
+    padding: 10px 28px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.pomo-btn:hover:not(:disabled){
+    background-color: rgb(40,180,70);
+    transform: translateY(-2px);
+}
+
+.pomo-btn:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pomo-btn-secondary{
+    background-color: var(--card-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+}
+
+.pomo-btn-secondary:hover:not(:disabled){
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.pomo-sessions{
+    margin-bottom: 30px;
+}
+
+.pomo-sessions p{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#pomoResetSessions{
+    background: none;
+    border: 1px solid #888;
+    color: #888;
+    padding: 5px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+#pomoResetSessions:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.pomo-history{
+    text-align: left;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 5px rgba(41,203,101,0.3);
+}
+
+.pomo-history h3{
+    margin-top: 0;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+#pomoHistoryList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.pomo-history-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4px;
+    border-bottom: 1px solid rgba(128,128,128,0.2);
+    font-size: 14px;
+}
+
+.pomo-history-item:last-child{
+    border-bottom: none;
+}
+
+.pomo-history-badge{
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+.pomo-badge-focus { background-color: #2a6e3f; color: #afffca; }
+.pomo-badge-break { background-color: #1a4a6e; color: #aaddff; }

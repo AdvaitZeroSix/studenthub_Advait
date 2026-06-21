@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Dashboard Student Hub</title>
+    <title>Dashboard – Student Hub</title>
 </head>
 <body>
 <nav>
@@ -14,6 +14,7 @@
         <a href="dashboard.html" class="Active">Dashboard</a>
         <a href="index.html#about">About</a>
         <a href="notes.html">Notes</a>
+        <a href="pomodoro.html">Pomodoro</a>
     </div>
     <div class="nav-right">
         <div class="theme-switch">
@@ -40,9 +41,9 @@
             <button onclick="window.location.href='notes.html'">Go to Notes</button>
         </div>
         <div class="card">
-            <h3>Timetable Manager</h3>
-            <p>Keep track of classes and important schedules.</p>
-            <button>Coming Soon</button>
+            <h3>Pomodoro Timer</h3>
+            <p>Stay focused with 25/5 minute work and break sprints.</p>
+            <button onclick="window.location.href='pomodoro.html'">Open Timer</button>
         </div>
         <div class="card">
             <h3>Tasks Manager</h3>
@@ -62,9 +63,9 @@
             placeholder="Enter a task..."
         >
         <select id="prioritySelect" class="priority-select">
-            <option value="low"> Low</option>
-            <option value="medium"> Medium</option>
-            <option value="high"> High</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
         </select>
         <button id="addTaskBtn">
             Add Task

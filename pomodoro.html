@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro Timer – Student Hub</title>
+</head>
+<body>
+<nav>
+    <h2><a href="index.html" class="nav-brand">Student Hub</a></h2>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="index.html#about">About</a>
+        <a href="notes.html">Notes</a>
+        <a href="pomodoro.html" class="Active">Pomodoro</a>
+    </div>
+    <div class="nav-right">
+        <div class="theme-switch">
+            <div class="switch-knob"></div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Pomodoro Timer</h1>
+    <p>Stay focused. Work in sprints, rest well, and track your sessions.</p>
+</section>
+
+<section class="pomodoro-section">
+
+    <!-- Mode tabs -->
+    <div class="pomo-tabs">
+        <button class="pomo-tab active" id="tabFocus">Focus</button>
+        <button class="pomo-tab" id="tabBreak">Break</button>
+    </div>
+
+    <!-- Timer display -->
+    <div class="pomo-ring-wrapper">
+        <svg class="pomo-ring" viewBox="0 0 200 200">
+            <circle class="pomo-ring-bg" cx="100" cy="100" r="88"/>
+            <circle class="pomo-ring-fill" id="pomoRingFill" cx="100" cy="100" r="88"/>
+        </svg>
+        <div class="pomo-time-display" id="pomoDisplay">25:00</div>
+    </div>
+
+    <!-- Controls -->
+    <div class="pomo-controls">
+        <button class="pomo-btn" id="pomoStart">Start</button>
+        <button class="pomo-btn pomo-btn-secondary" id="pomoPause" disabled>Pause</button>
+        <button class="pomo-btn pomo-btn-secondary" id="pomoReset">Reset</button>
+    </div>
+
+    <!-- Session counter -->
+    <div class="pomo-sessions">
+        <p>Sessions completed today: <span id="pomoCount">0</span></p>
+        <button id="pomoResetSessions">Reset Count</button>
+    </div>
+
+    <!-- Session history -->
+    <div class="pomo-history">
+        <h3>Today's Sessions</h3>
+        <ul id="pomoHistoryList">
+            <p class="task-empty" id="pomoEmptyMsg">No sessions yet — start focusing!</p>
+        </ul>
+    </div>
+
+</section>
+
+<footer>
+    <p>Student Hub by Advait Saxena</p>
+</footer>
+<button id="scrollTopBtn" aria-label="Scroll to top">&#8679;</button>
+<script src="script.js"></script>
+</body>
+</html>
