@@ -72,10 +72,12 @@ if(themeSwitch){
     });
 
 }
-let tasks =
-    JSON.parse(
-        localStorage.getItem("tasks")
-    ) || [];
+let tasks = [];
+try {
+    tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+} catch(e) {
+    tasks = [];
+}
 
 function saveTasks(){
 
@@ -86,6 +88,15 @@ function saveTasks(){
 
 }
 
+function escapeHTML(str) {
+    return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
 function renderTasks(){
 
     const taskList =
@@ -93,29 +104,22 @@ function renderTasks(){
 
     if(!taskList) return;
 
-    taskList.innerHTML = "";
-
     const pendingTasks =
         tasks.filter(task => !task.completed);
 
     const completedTasks =
         tasks.filter(task => task.completed);
 
+    let html = "";
+
     pendingTasks.forEach(task => {
 
-        const originalIndex =
-            tasks.indexOf(task);
+        const originalIndex = tasks.indexOf(task);
 
-        taskList.innerHTML += `
-            <li class="task-item">
-
-                <input
-                    type="checkbox"
-                    onchange="completeTask(${originalIndex})"
-                >
-
-                ${task.text}
-
+        html += `
+            <li class="task-item" data-index="${originalIndex}">
+                <input type="checkbox" data-index="${originalIndex}">
+                ${escapeHTML(task.text)}
             </li>
         `;
 
@@ -123,21 +127,19 @@ function renderTasks(){
 
     if(completedTasks.length > 0){
 
-        taskList.innerHTML += `
-            <h3>Completed Tasks</h3>
-        `;
+        html += `<li class="completed-heading"><h3>Completed Tasks</h3></li>`;
 
         completedTasks.forEach(task => {
-
-            taskList.innerHTML += `
+            html += `
                 <li class="completed-task">
-                    ${task.text}
+                    ${escapeHTML(task.text)}
                 </li>
             `;
-
         });
 
     }
+
+    taskList.innerHTML = html;
 
 }
 
@@ -149,6 +151,17 @@ function completeTask(index){
 
     renderTasks();
 
+}
+
+const taskList = document.getElementById("taskList");
+
+if(taskList){
+    taskList.addEventListener("change", function(e){
+        if(e.target.type === "checkbox"){
+            const index = parseInt(e.target.dataset.index);
+            completeTask(index);
+        }
+    });
 }
 
 const addTaskBtn =
