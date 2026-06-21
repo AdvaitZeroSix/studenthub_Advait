@@ -244,14 +244,9 @@ footer{
 }
 .completed-heading h3{
     margin: 0;
-}
-
     text-decoration: line-through;
-
     color: rgb(140,140,140);
-
-    margin:10px 0;
-
+    margin: 10px 0;
     list-style:none;
 }
 #addTaskBtn{
