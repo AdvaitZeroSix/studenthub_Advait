@@ -123,7 +123,7 @@ function renderTasks(){
     let html = "";
 
     if(pendingTasks.length === 0 && completedTasks.length === 0){
-        taskList.innerHTML = `<p class="task-empty">No tasks yet — add one above!</p>`;
+        taskList.innerHTML = `<p class="task-empty">No tasks yet. Add one above!</p>`;
         return;
     }
 
@@ -278,7 +278,7 @@ renderTasks();
         historyList.innerHTML = "";
 
         if(sessions.length === 0){
-            historyList.innerHTML = `<p class="task-empty">No sessions yet — start focusing!</p>`;
+            historyList.innerHTML = `<p class="task-empty">No sessions yet. Start focusing!</p>`;
             return;
         }
 
@@ -348,7 +348,7 @@ renderTasks();
             switchMode(!isFocus);
 
             if(Notification.permission === "granted"){
-                new Notification(isFocus ? "Time to focus!" : "Take a break — well done!");
+                new Notification(isFocus ? "Time to focus!" : "Take a break. Well done!");
             }
             return;
         }

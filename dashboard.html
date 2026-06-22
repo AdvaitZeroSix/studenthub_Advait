@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Dashboard – Student Hub</title>
+    <title>Dashboard | Student Hub</title>
 </head>
 <body>
 <nav>
@@ -25,15 +25,14 @@
         </button>
     </div>
 </nav>
-
 <section class="hero">
-    <h1>Welcome to Your Dashboard</h1>
+    <h1>Your Dashboard</h1>
     <p>
-        Here you can manage your notes, assignments, and resources all in one place.
+        Manage your notes, tasks, and focus sessions all in one place.
     </p>
 </section>
 <section class="features">
-    <h2>Your Dashboard Features</h2>
+    <h2>Dashboard Features</h2>
     <div class="feature-container">
         <div class="card">
             <h3>Notes Storage</h3>
@@ -42,20 +41,18 @@
         </div>
         <div class="card">
             <h3>Pomodoro Timer</h3>
-            <p>Stay focused with 25/5 minute work and break sprints.</p>
+            <p>Stay focused with 25 and 5 minute work and break sprints.</p>
             <button onclick="window.location.href='pomodoro.html'">Open Timer</button>
         </div>
         <div class="card">
             <h3>Tasks Manager</h3>
             <p>Manage assignments and deadlines efficiently.</p>
-            <button>Coming Soon</button>
-        </div> 
+            <button onclick="document.getElementById('task-section').scrollIntoView({behavior:'smooth'})">Go to Tasks</button>
+        </div>
     </div>
 </section>
-<section class="task-manager">
-
+<section class="task-manager" id="task-section">
     <h2>Task Manager</h2>
-
     <div class="task-input-container">
         <input
             type="text"
@@ -67,15 +64,10 @@
             <option value="medium">Medium</option>
             <option value="high">High</option>
         </select>
-        <button id="addTaskBtn">
-            Add Task
-        </button>
+        <button id="addTaskBtn">Add Task</button>
     </div>
-
     <ul id="taskList"></ul>
-    <button id="clearHistoryBtn">
-    Clear History
-    </button>
+    <button id="clearHistoryBtn">Clear Completed</button>
 </section>
 <footer>
     <p>Student Hub by Advait Saxena</p>
@@ -83,3 +75,4 @@
 <button id="scrollTopBtn" aria-label="Scroll to top">&#8679;</button>
 <script src="script.js"></script>
 </body>
+</html>
