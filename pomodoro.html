@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Pomodoro | Student Hub</title>
 </head>
 <body>
@@ -25,10 +26,12 @@
         </button>
     </div>
 </nav>
+
 <section class="hero">
-    <h1>Pomodoro Timer</h1>
-    <p>Stay focused. Work in sprints, rest well, and track your sessions.</p>
+    <h1 class="text-5xl font-bold tracking-tight mb-4">Pomodoro Timer</h1>
+    <p class="text-lg opacity-70 max-w-xl mx-auto">Stay focused. Work in sprints, rest well, and track your sessions.</p>
 </section>
+
 <section class="pomodoro-section">
     <div class="pomo-tabs">
         <button class="pomo-tab active" id="tabFocus">Focus</button>
@@ -55,6 +58,7 @@
         <ul id="pomoHistoryList"></ul>
     </div>
 </section>
+
 <footer>
     <p>Student Hub by Advait Saxena</p>
 </footer>

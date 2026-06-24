@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Notes | Student Hub</title>
 </head>
 <body>
@@ -25,50 +26,54 @@
         </button>
     </div>
 </nav>
+
 <section class="hero">
-    <h1>All Your Notes in One Place</h1>
-    <p>
+    <h1 class="text-5xl font-bold tracking-tight mb-4">All Your Notes in One Place</h1>
+    <p class="text-lg opacity-70 max-w-xl mx-auto mb-8">
         Store and organize your study notes by subject.
     </p>
     <div class="upload-section">
-        <h2>Add New Notes</h2>
-        <p>Upload PDFs, lecture notes, or study material.</p>
+        <h2 class="text-lg font-semibold mb-2">Add New Notes</h2>
+        <p class="text-sm opacity-65 mb-4">Upload PDFs, lecture notes, or study material.</p>
         <button id="uploadBtn">Upload Notes</button>
     </div>
 </section>
-<section class="features">
-    <h2>Your Notes</h2>
+
+<section class="features py-16 px-10 text-center">
+    <h2 class="text-2xl font-bold mb-4 tracking-tight">Your Notes</h2>
     <section class="search-section">
         <input id="searchBar" class="search-bar" type="text" placeholder="Search notes by subject...">
     </section>
-    <div class="feature-container">
+    <div class="feature-container mt-8">
         <div class="card note-card">
             <h3>Data Structures</h3>
             <p>Linked Lists, Stacks, Queues, Trees</p>
-            <p>Last Updated: June 15, 2026</p>
+            <p class="text-xs opacity-50">Last Updated: June 15, 2026</p>
             <button>Open Notes</button>
         </div>
         <div class="card note-card">
             <h3>Operating Systems</h3>
             <p>Processes, Scheduling, Memory Management</p>
-            <p>Last Updated: June 10, 2026</p>
+            <p class="text-xs opacity-50">Last Updated: June 10, 2026</p>
             <button>Open Notes</button>
         </div>
         <div class="card note-card">
             <h3>Database Management Systems</h3>
             <p>SQL, Normalization, Transactions</p>
-            <p>Last Updated: June 12, 2026</p>
+            <p class="text-xs opacity-50">Last Updated: June 12, 2026</p>
             <button>Open Notes</button>
         </div>
         <div class="card note-card">
             <h3>Computer Networks</h3>
             <p>OSI Model, TCP/IP, Routing</p>
-            <p>Last Updated: June 8, 2026</p>
+            <p class="text-xs opacity-50">Last Updated: June 8, 2026</p>
             <button>Open Notes</button>
         </div>
     </div>
 </section>
+
 <p class="no-results" id="noResults">No notes found matching your search.</p>
+
 <footer>
     <p>Student Hub by Advait Saxena</p>
 </footer>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Student Hub</title>
 </head>
 <body>
@@ -25,16 +26,18 @@
         </button>
     </div>
 </nav>
+
 <section class="hero">
-    <h1>Stay Organized</h1>
-    <p>
+    <h1 class="text-5xl font-bold tracking-tight mb-4">Stay Organized</h1>
+    <p class="text-lg opacity-70 max-w-xl mx-auto mb-8">
         Student Hub helps students manage their notes, assignments,
         and academic resources all in one place.
     </p>
     <button onclick="window.location.href='dashboard.html'">Get Started</button>
 </section>
-<section class="features">
-    <h2>Top Features</h2>
+
+<section class="features py-16 px-10 text-center">
+    <h2 class="text-2xl font-bold mb-8 tracking-tight">Top Features</h2>
     <div class="feature-container">
         <div class="card">
             <h3>Notes Storage</h3>
@@ -50,16 +53,18 @@
         </div>
     </div>
 </section>
+
 <section class="about" id="about">
-    <h2>About Student Hub</h2>
-    <p>
+    <h2 class="text-2xl font-bold mb-6 tracking-tight">About Student Hub</h2>
+    <p class="max-w-lg mx-auto opacity-75 text-base leading-relaxed">
         Student Hub is a platform designed to help students organize
         notes, manage assignments, and stay productive throughout
         their academic journey.
     </p>
 </section>
-<section class="stats" id="stats">
-    <h2>Why Student Hub?</h2>
+
+<section class="stats py-16 px-10 text-center" id="stats">
+    <h2 class="text-2xl font-bold mb-8 tracking-tight">Why Student Hub?</h2>
     <div class="feature-container">
         <div class="card">
             <h3>Responsive Design</h3>
@@ -75,6 +80,7 @@
         </div>
     </div>
 </section>
+
 <footer>
     <p>Student Hub by Advait Saxena</p>
 </footer>
